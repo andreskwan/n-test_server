@@ -10,15 +10,25 @@ figure
 
 .author 
 	color gris_claro
-	
+
 .container
 	font-size 0
-	padding 1.4em
+	padding 1.4rem
+	text-align center
 
 .name
 	color gris_oscuro
 
 .song
 	display inline-block
-	width 8rem  
 	font-size 1rem 
+	margin-botton 1rem
+	margin-right 1rem
+	text-align left
+	width 8rem  
+	//seudo classes	
+	//remove margin-right only for even
+	&:nth-child(even)
+		margin-right 0
+	p 
+		margin .5rem 0 
