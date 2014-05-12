@@ -1,4 +1,5 @@
 @import 'normalize.styl'
+@import 'fonts.styl'
 
 dark_grey   = #333333
 light_grey  = #818181
@@ -10,28 +11,33 @@ body
 	font-size 16px
 figure 
 	margin 0 
+img
+	vertical-align top
+ul
+	margin 0
+	padding 0
 
+.button-menu
+	color red
+	left .5em
+	margin-top -8px
+	position absolute
+	top 50%
+
+//oocss classes
 .author 
 	color light_grey
 .border-bottom
 	border-bottom 1px solid light_grey
-.button-menu
-  	// left .5rem
-  	// margin-top -10px
-  	position absolute
-  	// top 50%
-
 .container
 	font-size 0
 	padding 1.4rem
 	text-align center
 .header
-	height 3.5rem 
-	// a
-	// 	display none
+	height 3.5em 
 	.title
-		font-size 1.1rem
-		line-height 3.5rem
+		font-size 1.1em
+		line-height 3.5em
 		margin 0
 		text-align center
 .menu
