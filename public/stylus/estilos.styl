@@ -1,24 +1,46 @@
 @import 'normalize.styl'
 
-gris_oscuro = #333333
-gris_claro  = #818181
+dark_grey   = #333333
+light_grey  = #818181
 
+a 
+	text-decoration none
 body
+	font-family 'Varela Round', sans-serif
 	font-size 16px
 figure 
 	margin 0 
 
 .author 
-	color gris_claro
+	color light_grey
+.border-bottom
+	border-bottom 1px solid light_grey
+.button-menu
+  	// left .5rem
+  	// margin-top -10px
+  	position absolute
+  	// top 50%
 
 .container
 	font-size 0
 	padding 1.4rem
 	text-align center
-
+.header
+	height 3.5rem 
+	// a
+	// 	display none
+	.title
+		font-size 1.1rem
+		line-height 3.5rem
+		margin 0
+		text-align center
+.menu
+	display none
 .name
-	color gris_oscuro
-
+	color dark_grey  
+//class OOCSS 
+.relative 
+	position relative
 .song
 	display inline-block
 	font-size 1rem 
