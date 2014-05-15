@@ -25,6 +25,8 @@ ul
 	font-size 1.2em
 	&:last-child
 		margin-right 0
+	&.tColor
+		color dark_grey
 .actions
 	background rgba(black, .3)
 	bottom 0
@@ -56,6 +58,8 @@ ul
 		line-height 3.5em
 		margin 0
 		text-align center
+.left 
+	float left 
 .menu
 	display none
 .name
@@ -100,6 +104,8 @@ ul
 		width  10px
 .relative 
 	position relative
+.right
+	float right
 .right-text
 	text-align right
 .song
@@ -113,3 +119,31 @@ ul
 		margin-right 0
 	p 
 		margin .5rem 0 
+//tablet
+@media screen and (min-width:480px)
+	.song
+		&:nth-child(even)
+			margin-right 1em
+	.image
+		img
+			width 100%
+			height auto
+	.playing
+		&.medium
+			 width auto
+//desktop
+@media screen and (min-width:1000px)
+	.button-menu
+		display none
+	.header
+		height auto
+		.title
+			display none
+	.image
+		width 122px
+		background black
+	.logo
+		padding 1.3em 0
+		overflow hidden
+		.wrap
+			width 1000px
