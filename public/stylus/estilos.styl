@@ -1,8 +1,9 @@
 @import 'normalize.styl'
 @import 'fonts.styl'
 
-dark_grey   = #333333
-light_grey  = #818181
+dark_grey    = #333333
+light_grey   = #818181
+progress_red = #BD255B
 
 a 
 	text-decoration none
@@ -11,24 +12,39 @@ body
 	font-size 16px
 figure 
 	margin 0 
+//align img with 
 img
 	vertical-align top
 ul
 	margin 0
 	padding 0
-
-.button-menu
-	color red
-	left .5em
-	margin-top -8px
-	position absolute
-	top 50%
-
 //oocss classes
+.action 
+	color white
+	margin-right .5em
+	font-size 1.2em
+	&:last-child
+		margin-right 0
+.actions
+	background rgba(black, .3)
+	bottom 0
+	left 0
+	position absolute
+	right 0
 .author 
 	color light_grey
 .border-bottom
 	border-bottom 1px solid light_grey
+.button-menu
+	color dark_grey
+	left .5em
+	margin-top -8px
+	position absolute
+	top 50%
+.center-block
+	margin 0 auto 
+.center-text
+	text-align center
 .container
 	font-size 0
 	padding 1.4rem
@@ -45,8 +61,47 @@ ul
 .name
 	color dark_grey  
 //class OOCSS 
+.padding
+	padding 1em
+.playing
+	&.small
+		width 20em 
+.progress
+	margin 1em
+	position relative
+	.min 
+	.max 
+		font-size .8em
+		position absolute
+		top -5px
+	.min
+		left 0
+	.max
+		right 0
+	.total
+		background dark_grey
+		border-radius 5px
+		height 5px
+		margin 0 auto
+		width 75%
+	.state
+		background  progress_red
+		border-radius 5px
+		height 5px
+		width  30%
+		position relative
+	.circle
+		background dark_grey
+		border-radius 50%
+		height 10px
+		position absolute
+		right  0
+		top    -2.5px
+		width  10px
 .relative 
 	position relative
+.right-text
+	text-align right
 .song
 	display inline-block
 	font-size 1rem 
@@ -54,8 +109,6 @@ ul
 	margin-right 1rem
 	text-align left
 	width 8rem  
-	//seudo classes	
-	//remove margin-right only for even
 	&:nth-child(even)
 		margin-right 0
 	p 
