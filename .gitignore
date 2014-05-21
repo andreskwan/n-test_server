@@ -1,3 +1,4 @@
-node_modules
-*.log
-
+*.jpg
+node_modules/
+*/*.jpg
+public/img/songs/r-hell-Dr-Stein.jpg public/img/songs/r-hell-betterthanraw.jpg public/img/songs/r-hell-live-uk.jpg public/img/songs/r-hell-power.jpg public/img/songs/r-manowar-lowder.jpg public/img/songs/r-manowar-warriors.jpg
