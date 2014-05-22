@@ -1,0 +1,21 @@
+.post{
+	background: #d1d1d1;
+	width: 19em;/*
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius : 4px;
+	border-top-left-radius    : 4px;
+	border-top-right-radius   : 4px;
+*/
+	border-radius: 10px;
+	  /*border-radius: 50%;*/
+	  /*box-shadow: 0px 10px 10px #a1a1a1*/
+
+  	  /*box-shadow: inset 0px 10px 0px #ce6a67;*/
+  	box-shadow: 0 1px 0 #969c8a, 0 2px 0 #fff;
+  	color: white;
+	text-shadow: 0 1px 2px #000;
+}
+
+.post .avatar{
+	border-radius: 50%;
+}

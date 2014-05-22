@@ -3,12 +3,83 @@
 <head>
 	<meta charset="UTF-8">
 	<title>CodeSchool HTML5-CSS</title>
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-	<p><b class="lead">The Art Gallery will be opening to an invitation-only group of art enthusiasts across the country.</b></p>
-	<p>The opening of the Art Gallery will coincide with the release of several of Armando Blontio's finest art pieces, including, "Crème de la Crème," which has a mounting anticipation for its debut.</p>
-	<p>As a frequently misrespresented artist, Armando Blontio has struggled to uphold his image amidst the criticism. "I hope to dispel the illusion of my self-centeredness, as seen by my critics, with the Art Gallery opening that shows a softer side of myself," said Mr. Blontio.</p>
-	<p>The Art Gallery will be opening to an <em>invitation-only</em> group of art enthusiasts.</p>
-	<p>The Art Gallery will be opening on <strong>December 1, 2013</strong>.</p>
+<body>	
+	<header>
+		<nav>
+		  <ul>
+		    <li><a class="active" href="/blog">Blog</a></li>
+		    <li><a href="/about">About</a></li>
+		    <li><a href="/contact">Contact</a></li>
+		  </ul>
+		</nav>
+	</header>
+	<section class="post">
+		<article class="avatar-flags">
+			<figure class="avatar">
+				<img src="img/songs/r-hell-power.jpg" height="60" width="60" alt="">	
+			</figure>
+		</article>
+		<article>
+			<header class="user-name">
+				Andres Kwan O.
+			</header>
+			<p class="user-message">
+				Hi!
+			</p>
+			<footer class="message-time">
+				right now!
+			</footer>
+		</article>
+	</section>	
+
+	<section>
+		<header>
+			<h1>Header title</h1>
+			<p> Paragraph with a "b" tag-> <b class="lead"> b tag </b></p>
+		</header>
+		<article>
+			<p>Normal paragraph</p>
+			<p> Paragraph with a "em" -> <em>invitation-only</em> group of art enthusiasts.</p>
+			<p>Paragraph with <strong>"strong"</strong> -> <strong>December 1, 2013</strong>.</p>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h2>Blog</h2>
+			<p>This is the Art Gallery blog.</p>
+		</header>
+  		<article>
+		  <header>
+		    <h2><a href="/blog/opening-date-announced">Opening Date Announced</a></h2>
+		    <p><em>Published on</em>: September 16, 2013</p>
+		  </header>
+
+		  <p><b class="article-lead">The Art Gallery will be opening to an <em>invitation-only</em> group of art enthusiasts across the country on <strong>December 1, 2013</strong>.</b></p>
+		  <p>The opening of the Art Gallery will coincide with the release of several of Armando Blontio's finest art pieces, including, "Crème de la Crème," which has a mounting anticipation for its debut.</p>
+		  <p>As a frequently misrespresented artist, Armando Blontio has struggled to uphold his image amidst the criticism. "I hope to dispel the illusion of my self-centeredness, as seen by my critics, with the Art Gallery opening," said Mr. Blontio.</p>
+		</article>
+		<aside>
+			<figure>
+			  <img src="img/songs/r-hell-betterthanraw.jpg" alt="A Famous Armando Blontio Painting" width="160" height="160" />
+			  <figcaption>Better Than Raw - Helloween</figcaption>
+			  <p><em>Publishe on</em>: <time>: September 16, 2013</time></p>
+			</figure>	
+		</aside>  		
+		<input type="text" list="categories">
+		<datalist id="categories">
+			<option value="reviews"></option>
+			<option value="profiles"></option>
+			<option value="announcements"></option>
+			<option value="list"></option>
+		</datalist>
+
+		<input type="tel" pattern="[0-9]{10}"/>
+	</section>
+
+
+
+
 </body>
 </html>
