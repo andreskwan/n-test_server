@@ -7,7 +7,10 @@ function b() {
 };
 
 function a() {
-	throw new Error('Error: Here');
+	//now involving the even loop
+	setTimeout (function () {
+		throw new Error('Here');
+	}, 10);
 };
 
 c();
