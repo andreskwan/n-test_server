@@ -13,7 +13,11 @@ var util = require('util');
 
 // console.log('Current working directory: ' + process.cwd());
 
-fs.readdir(process.cwd(), function (err, files) {
+//err & files is what is returned when the function is executed
+//files is an array of files
+
+// console.log('	'+i+'\033[31m \033[39m\n');
+var fileExplorer = function (err, files) {
 	// console.log('	'+i+'\033[31m \033[39m\n');
 	console.log('');
 	//No files to display
@@ -26,8 +30,7 @@ fs.readdir(process.cwd(), function (err, files) {
 
 	function file(i) {
 		var filename = files[i];	
-		
-		fs.stat(__dirname + '/' + filename, function (err, stat){
+		var identifyFile = function (err, stat){
 			// console.log(util.inspect(stat, { showHidden: true, colors: true }));
 			if (stat.isDirectory()) 
 			{
@@ -47,11 +50,18 @@ fs.readdir(process.cwd(), function (err, files) {
 				//identify the next file, but how iterates? by recursivity!!!
 				file(i);
 			}
-		});
+		};
+
+		fs.stat(__dirname + '/' + filename, identifyFile);
 	}
 	file(0);
+};
 
-});
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+fs.readdir(process.cwd(), fileExplorer);
+
 
 
 
