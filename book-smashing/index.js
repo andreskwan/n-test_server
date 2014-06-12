@@ -6,5 +6,5 @@ a.on('event', function (){
 	console.log('event called');
 });
 
-//calls the event in the same file!!!
+//calls the event in the same file
 a.emit('event');
