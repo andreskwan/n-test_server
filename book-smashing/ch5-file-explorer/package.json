@@ -1,0 +1,26 @@
+{
+  "name": "ch5-file-explorer",
+  "version": "0.0.1",
+  "description": "Command line file explorer with node.js",
+  "main": "file-explorer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreskwan/n-test_server.git"
+  },
+  "keywords": [
+    "Node",
+    "APIs",
+    "First",
+    "App",
+    "Module"
+  ],
+  "author": "Smashing Book",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreskwan/n-test_server/issues"
+  },
+  "homepage": "https://github.com/andreskwan/n-test_server"
+}
