@@ -37,6 +37,7 @@ var fileExplorer = function (err, files) {
 		
 		function identifyFile (err, stat){
 			// console.log("identify -> files.length: "+files.length);
+			//saving reference to stat
 			stats[i] = stat;
 			// console.log(util.inspect(stat, { showHidden: true, colors: true }));
 			if (stat.isDirectory()) 
@@ -75,7 +76,7 @@ var fileExplorer = function (err, files) {
 		//console.log('');
 		console.log('\033[90m' + data.replace(/(.*)/g, ' 	$1') + '\033[39m');
 	}
-	function directoryContent (err, files){
+	function showDirectoryContent (err, files){
 		//console.log('');
 		//why files is not in the scope?? because here files are different
 		// console.log("option -> files.length: "+files.length);
@@ -94,7 +95,7 @@ var fileExplorer = function (err, files) {
 				stdin.pause();
 				if(stats[Number (data)].isDirectory()){
 					// console.log("option -> files.length: "+files.length);
-					fs.readdir(__dirname + '/' + filename, directoryContent);
+					fs.readdir(__dirname + '/' + filename, showDirectoryContent);
 				} else {
 					////////////////////////////////////////////////////////////////////////////
 					fs.readFile(__dirname + '/' + filename, 'utf8' , showFileContent);
