@@ -69,7 +69,7 @@ var fileExplorer = function (err, files) {
 		//how should be done today (2014/06)
 		stdin.resume();
 		stdin.setEncoding('utf8');
-		//read
+		//waiting for an event that allows me to read
 		stdin.on('data', option);
 	}
 	function showFileContent (err, data){
@@ -92,7 +92,13 @@ var fileExplorer = function (err, files) {
 			if (!filename) {
 				stdout.write('	\033[31mEnter your choice: \033[39')
 			}else{
+				//after paused
+				//option the show... function is executed
+				//and after that the program is finished
+				//this pause set the stdin stream in its defaul state
+				//without it keeps waiting, is not closed
 				stdin.pause();
+
 				if(stats[Number (data)].isDirectory()){
 					// console.log("option -> files.length: "+files.length);
 					fs.readdir(__dirname + '/' + filename, showDirectoryContent);
